@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:xmlns="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0"
+    package="com.example.android.sensorvaluesrec"
+    android:platformBuildVersionCode="25"
+    android:platformBuildVersionName="7.1.1" >
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<meta-data android:name="android.support.VERSION" android:value="25.3.0" />
+<application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:debuggable="true" android:allowBackup="true" android:supportsRtl="true">
+<activity android:name="com.example.android.sensorvaluesrec.MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+<service android:name="com.example.android.sensorvaluesrec.LockService">
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+    </intent-filter>
+</service>
+<activity android:name="com.example.android.sensorvaluesrec.velocity" />
+</application>
+    </manifest>
